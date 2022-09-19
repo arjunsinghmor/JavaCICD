@@ -1,14 +1,17 @@
 pipeline {
   agent any
+    tools  {
+      maven '3.6.3' 
+    }
     stages {
         stage('Build') {
             steps {
-                  'mvn clean install'
+                sh 'mvn clean install'
             }
         }
         stage('Test') {
             steps {
-                  'mvn test'
+                sh 'mvn test'
             }
             post {
                 always {
@@ -18,7 +21,7 @@ pipeline {
         }
         stage('Publish') {
             steps {
-                 'mvn clean deploy'
+                sh 'mvn clean deploy'
             }
         }
     }
