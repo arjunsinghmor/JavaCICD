@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter;
 public class App
 {
 
-    private final String message = "Welcome to Vitraya Tech!";
+    private final String message = "Welcome to Vitraya Techh!";
 
     public App() {}
 
