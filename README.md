@@ -6,4 +6,4 @@ The repository contains a simple Java application which outputs the string
 main application works as expected. The results of these tests are saved to a
 JUnit XML report.
 
-JAVAVAVA
+JAVA TECH
