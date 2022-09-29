@@ -34,9 +34,9 @@ public class AppTest
     {
         App.main(null);
         try {
-            assertEquals("Welcome to Vitraya Tech!" + System.getProperty("line.separator"), outContent.toString());
+            assertEquals("Welcome to Vitraya Techh!" + System.getProperty("line.separator"), outContent.toString());
         } catch (AssertionError e) {
-            fail("\"message\" is not \"Welcome to Vitraya Tech!\"");
+            fail("\"message\" is not \"Welcome to Vitraya Techh!\"");
         }
     }
 
