@@ -6,3 +6,4 @@ The repository contains a simple Java application ( APP ) which outputs the stri
 main application works as expected. The results of these tests are saved to a
 JUnit XML report.
 
+JAVA APP test
