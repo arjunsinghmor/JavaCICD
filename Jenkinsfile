@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Copy file') {
 	    steps {
-                sh 'cd /var/lib/jenkins/.m2/repository/com/mycompany/app/my-app/1.0-SNAPSHOT cp -rf my-app-1.0-SNAPSHOT.jar /opt/TestingZip'
+                sh 'cd /opt/JavaApp/JavaCICD/target cp -rf "my-app-1.0-SNAPSHOT.jar" /opt/TestingZip'
             }
         }
     }
