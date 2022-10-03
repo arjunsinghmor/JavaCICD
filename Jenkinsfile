@@ -11,7 +11,8 @@ pipeline {
         }
         stage('Copy file') {
 	    steps {
-                sh 'cd /opt/JavaApp/JavaCICD/target cp -rf "my-app-1.0-SNAPSHOT.jar" /opt/TestingZip'
+                sh 'cd /opt/TestingZip'
+		sh 'cp -r /opt/JavaApp/JavaCICD/target/my-app-1.0-SNAPSHOT.jar .'
             }
         }
     }
