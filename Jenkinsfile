@@ -10,9 +10,11 @@ pipeline {
             }
         }
         stage('Copy file') {
-            steps {
+             steps {
+			          sh 'ssh ec2-user@35.167.219.34'
+				        sh 'sudo su-'
                 sh 'cd /var/lib/jenkins/.m2/repository/com/mycompany/app/my-app/1.0-SNAPSHOT'
-                sh 'cp -rf "my-app-1.0-SNAPSHOT.jar" /opt/TestingZip'
+				        sh 'cp -rf my-app-1.0-SNAPSHOT.jar /opt/TestingZip'
             }
         }
     }
