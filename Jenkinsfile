@@ -9,9 +9,10 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-        stage('Zip File') {
+        stage('Copy file') {
             steps {
-                sh 'zip myapp.zip my-app-1.0-SNAPSHOT.jar'
+                sh 'cd /var/lib/jenkins/.m2/repository/com/mycompany/app/my-app/1.0-SNAPSHOT/'
+			        	sh 'cp -rf my-app-1.0-SNAPSHOT.jar /opt/TestingZip'
             }
         }
     }
