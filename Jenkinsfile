@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Zip File') {
             steps {
-                sh 'zip my-app-1.0-SNAPSHOT.jar'
+                sh 'zip myapp.zip my-app-1.0-SNAPSHOT.jar'
             }
         }
     }
