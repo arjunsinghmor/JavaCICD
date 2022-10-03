@@ -12,7 +12,7 @@ pipeline {
         stage('Copy file') {
 	    steps {
                 sh 'cd /opt/TestingZip'
-		sh 'cp -r /opt/JavaApp/JavaCICD/target/my-app-1.0-SNAPSHOT.jar .'
+		sh 'cp /opt/JavaApp/JavaCICD/target/my-app-1.0-SNAPSHOT.jar .'
             }
         }
     }
