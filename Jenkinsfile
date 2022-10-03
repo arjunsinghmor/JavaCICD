@@ -9,19 +9,9 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-        stage('Test') {
+        stage('Zip File') {
             steps {
-                sh 'mvn test'
-            }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
-        }
-        stage('Publish') {
-            steps {
-                echo 'mvn package'
+                sh 'cd/target/ zip my-app-1.0-SNAPSHOT.jar'
             }
         }
     }
