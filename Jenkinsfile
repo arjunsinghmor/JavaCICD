@@ -9,10 +9,19 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-        stage('Copy file') {
-	    steps {
-                sh 'cd /opt/TestingZip'
-		sh 'cp /opt/JavaApp/JavaCICD/target/my-app-1.0-SNAPSHOT.jar .'
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                }
+            }
+        }
+        stage('Publish') {
+            steps {
+                echo 'mvn package'
             }
         }
     }
